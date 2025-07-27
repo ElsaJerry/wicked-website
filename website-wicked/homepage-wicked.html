@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team WIC-KED - Revolutionizing WIC Advocacy</title>
+    <link rel="stylesheet" href="../css-wicked.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Team WIC-KED</div>
+            <ul class="nav-links">
+                <li><a href="./homepage-wicked.html">Home</a></li>
+                <li><a href="./research-wicked.html">Research</a></li>
+                <li><a href="./design-wicked.html">Design</a></li>
+                <li><a href="solution.html">Solution</a></li>
+                <li><a href="./team-wicked.html">Team</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Meet Ripley, the Casemaker: Elevating Advocacy for NY Families</h1>
+                <h2>Bringing Innovation to the Heart of WIC Work</h2>
+                <p>Empowering the WIC Association of New York State through a revolutionary solution that combines the strength of tailoring powerful messages, simplicity, and security—enabling high-impact actions without the heavy lift.</p>
+                <div class="cta-buttons">
+                    <a href="solution.html" class="btn btn-primary">Explore Our Solution</a>
+                    <a href="research.html" class="btn btn-secondary">View Research</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section class="overview">
+        <div class="overview-container">
+            <h2 class="section-title">Bridging Real Lives and Policy Decisions</h2>
+            <p style="text-align: center; font-size: 1.2rem; color: var(--text-light); max-width: 800px; margin: 0 auto;">
+                Our project centers on closing the gap between people's lived realities and the decision makers poised to drive meaningful change. We dig into the challenges of data collection, trust, effective communication, and system efficiency—so that every voice informs advocacy and action.
+
+            </p>
+            
+            <div class="overview-grid">
+                <div class="overview-card">
+                    <h3>Website Redesign</h3>
+                    <p>Redesigned the WICANYS website to better serve diverse stakeholders with clear pathways, actionable advocacy resources, and improved content organization.</p>
+                </div>
+                <div class="overview-card">
+                    <h3>Data Dashboard</h3>
+                    <p>Built an interactive dashboard that transforms participant surveys into compelling, legislator-specific advocacy materials with AI-powered insights.</p>
+                </div>
+                <div class="overview-card">
+                    <h3>Ripley the Casemaker</h3>
+                    <p>Developed an AI-powered advocacy assistant that helps lobbyists craft personalized narratives, practice presentations, and generate strategic materials.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pages Section -->
+    <section class="pages">
+        <div class="pages-container">
+            <h2 class="section-title">Explore Our Work</h2>
+            <div class="pages-grid">
+                <div class="page-card">
+                    <h3>Research</h3>
+                    <p>Research drives our early-stage concept development, helping us deeply explore the problem space, challenge assumptions, and reshape the problem statement before we even begin designing the right solution.</p>
+                    <a href="research.html" class="btn btn-primary">View Research</a>
+                </div>
+                <div class="page-card">
+                    <h3>Design Process</h3>
+                    <p>The insights we gathered guided us into the ideation stage, where we explored a wide range of possibilities before narrowing in on one strong direction to develop: Ripley.</p>
+                    <a href="design.html" class="btn btn-primary">View Design</a>
+                </div>
+                <div class="page-card">
+                    <h3>Our Solution</h3>
+                    <p>Ripley is our response to a complex, nuanced challenge in the advocacy space—where constraints are real, and advocacy itself is as much an art as it is a strategy. Instead of addressing just one touchpoint, Ripley aims to create lasting impact by generating ripple effects across the entire journey.</p>
+                    <a href="solution.html" class="btn btn-primary">View Solution</a>
+                </div>
+                <div class="page-card">
+                    <h3>Behind The Ripple</h3>
+                    <p>In WIC-KED is a team of thinkers, doers, and believers, driven by a shared commitment to navigate complexity and design with care.</p>
+                    <a href="team.html" class="btn btn-primary">Meet the Team</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <h3>Team WIC-KED</h3>
+                <p>MHCI Capstone Project for the WIC Association of New York State</p>
+                <p>Carnegie Mellon University • July 2025</p>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Team WIC-KED. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add active nav state on scroll
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const sections = document.querySelectorAll('section');
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
