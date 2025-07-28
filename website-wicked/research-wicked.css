@@ -314,12 +314,20 @@ nav {
     color: var(--primary-pink);
 }
 
+.image-placeholder.loaded {
+    background-image: var(--bg-image);
+    background-size: cover;
+    background-position: center;
+    color: transparent;
+    border: none;
+}
+
 .image-placeholder.large {
-    height: 300px;
+    height: 400px;
 }
 
 .image-placeholder.medium {
-    height: 200px;
+    height: 330px;
 }
 
 .image-placeholder.small {
