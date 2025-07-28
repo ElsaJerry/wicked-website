@@ -314,6 +314,14 @@ nav {
     color: var(--primary-pink);
 }
 
+.image-placeholder.loaded {
+    background-image: var(--bg-image);
+    background-size: cover;
+    background-position: center;
+    color: transparent;
+    border: none;
+}
+
 .image-placeholder.large {
     height: 300px;
 }
