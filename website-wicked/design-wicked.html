@@ -3,23 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Design Process</title>
+    <title>Design Process - WIC Association of New York State</title>
     <link rel="stylesheet" href="./design-wicked.css">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav>
         <div class="nav-container">
-            <div class="logo"><img src="./assets/logo-transparent.png" width="50"></div>
+            <div class="logo"><img src="./assets/logo-transparent.png" width="50" alt="WIC Logo"></div>
             <ul class="nav-links">
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./research-wicked.html">Research</a></li>
-                <li><a href="./design-wicked.html">Design</a></li>
+                <li><a href="./design-wicked.html" class="active">Design</a></li>
                 <li><a href="./solution-wicked.html">Solution</a></li>
                 <li><a href="./team-wicked.html">Team</a></li>
             </ul>
         </div>
     </nav>
+    
     <div class="header">
         <div class="container">
             <h1>Design Process</h1>
@@ -59,6 +60,8 @@
             </div>
 
             <h3>Key Prototypes</h3>
+            
+
             <table class="prototype-table">
                 <thead>
                     <tr>
@@ -112,37 +115,78 @@
                     </tr>
                 </tbody>
             </table>
+            <div class="image-placeholder">
+                <div class="image-icon">
+                    <img src="./assets/wic-text.png">
+                    <img src="./assets/advocacy-bingo.png">
+                    <img src="./assets/Wic-letters.png">
+                    <img src="./assets/advice-wall.png">
+                </div>
+    
+            </div>
 
             <h3>Research Insights</h3>
+            
+            <div class="image-placeholder">
+                <div class="image-text">User Research Findings</div>
+                <p class="image-description">Key insights from interviews, surveys, and usability testing sessions</p>
+            </div>
+
             <div class="learning-grid">
                 <div class="learning-card">
-                    <div class="learning-title">Parallel  Phase</div>
+                    <div class="learning-title">Parallel Phase</div>
                     <p><strong>Key Finding:</strong> Participants need to feel secure and participate with ease when sharing personal stories for advocacy.</p>
                 </div>
                 <div class="learning-card">
                     <div class="learning-title">Iterative Phase</div>
-                    <p><strong>Key Finding:</strong> Legislative advocates need an efficient data management system that bolsters and preserves their autonomy, having full control over how the systems are implemented. </p>
+                    <p><strong>Key Finding:</strong> Legislative advocates need an efficient data management system that bolsters and preserves their autonomy, having full control over how the systems are implemented.</p>
                 </div>
                 <div class="learning-card">
                     <div class="learning-title">Final Insights</div>
-                    <p><strong>Key Finding:</strong> Advocacy must be aligned with legislators’ priorities and the needs of their constituents, politically, personally, and ideologically.</p>
+                    <p><strong>Key Finding:</strong> Advocacy must be aligned with legislators' priorities and the needs of their constituents, politically, personally, and ideologically.</p>
                 </div>
             </div>
 
             <div class="key-learnings">
                 <h3>Solution Development</h3>
+                
+    
                 <div class="stream-grid">
                     <div class="stream-card survey">
                         <div class="stream-title">Survey Design</div>
                         <p>Focused on transparency, security, and clear data usage to build trust and encourage regular participation from WIC staff and participants.</p>
+                        
+                        <div class="image-placeholder" style="margin: 15px 0;">
+                            <div class="image-icon">
+                                <img src="./assets/survey-photo.png">
+                            </div>
+                            <div class="image-text">Survey Flow Mockups</div>
+                            <p class="image-description">Mobile-first survey interface designs with accessibility features</p>
+                        </div>
                     </div>
                     <div class="stream-card dashboard">
                         <div class="stream-title">Dashboard Creation</div>
                         <p>Emphasized efficiency and autonomy, ensuring advocates maintain full control over data interpretation and storytelling.</p>
+                        
+                        <div class="image-placeholder" style="margin: 15px 0;">
+                            <div class="image-icon">
+                                <img src="./assets/wicanys-core.png">
+                            </div>
+                            <div class="image-text">Dashboard Interface</div>
+                            <p class="image-description">Interactive data visualization prototypes with customizable views</p>
+                        </div>
                     </div>
                     <div class="stream-card website">
                         <div class="stream-title">Website Redesign</div>
                         <p>Created clear pathways for different stakeholder segments with specific call-to-actions throughout the user journey.</p>
+                        
+                        <div class="image-placeholder" style="margin: 15px 0;">
+                            <div class="image-icon">
+                                <img src="./assets/wica-website.png">
+                            </div>
+                            <div class="image-text">Website Redesign Mockups</div>
+                            <p class="image-description">Before/after website comparisons showing improved user experience</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -150,8 +194,49 @@
             <div class="refining-section">
                 <h3>Final Implementation</h3>
                 <p>During the refinement phase, we built functional prototypes using WordPress for the website and Streamlit for the dashboard. Legislator feedback inspired the creation of <strong>Ripley the Casemaker</strong> - an AI-powered advocacy assistant that transforms how advocates prepare for legislative meetings.</p>
+                
+                <div class="image-placeholder">
+                    <div class="image-icon">
+                        <a href="./assets/ripley final.mp4"> Watch Ripley</a>
+                    </div>
+                    <div class="image-text">Ripley Interface Demo</div>
+                    <p class="image-description">Interactive prototype screenshots showing Ripley's conversational AI interface and key features</p>
+                </div>
             </div>
         </div>
     </div>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add active nav state on scroll
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const sections = document.querySelectorAll('section');
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
