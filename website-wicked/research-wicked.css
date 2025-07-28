@@ -295,7 +295,43 @@ nav {
     color: var(--primary-pink);
     margin-bottom: 1rem;
 }
+/* Image Placeholders */
+.image-placeholder {
+    background: linear-gradient(135deg, var(--light-gray) 0%, var(--border-light) 100%);
+    border: 2px dashed var(--text-light);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-light);
+    font-weight: 500;
+    margin: 2rem 0;
+    transition: all 0.3s ease;
+}
 
+.image-placeholder:hover {
+    border-color: var(--primary-pink);
+    color: var(--primary-pink);
+}
+
+.image-placeholder.large {
+    height: 300px;
+}
+
+.image-placeholder.medium {
+    height: 200px;
+}
+
+.image-placeholder.small {
+    height: 150px;
+}
+
+.research-visuals {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
 /* Footer */
 .footer {
     background: var(--dark-gray);
